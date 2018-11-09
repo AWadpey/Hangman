@@ -35,14 +35,14 @@ var wins = 0;
 function resetGame() {
     remainingGuesses = maxTries;
 
-    currentWord = Math.floor(Math.random() * (words.length));
+    currentWord = words[Math.floor(Math.random() * words.length - 1)];
 
     guessedLetters= [];
     rightletter = [];
 
 
     // the chosen word is replaced by _
-    for (var i = 0; i < words[currentWord].length; i++) {
+    for (var i = 0; i < currentWord.length; i++) {
         rightletter.push("_");
     }
 
@@ -56,13 +56,13 @@ function resetGame() {
     updateDisplay();
 
 };
-
+resetGame();
 console.log("Computer Pick: " + currentWord);
 
 
 function updateDisplay() {
 
-    document.getElementById("totalWins").innerText = wins;
+    document.getElementById("totalWins").textContent = wins;
 
 
     // show how many letters have been guessed right so far
