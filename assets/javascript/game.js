@@ -81,8 +81,8 @@ function evaluateGuess(letter) {
     var positions = [];
 
     // if correct replace _ with actual letter
-    for (var i = 0; i < words[currentWord].length; i++) {
-        if(words[currentWord][i] === letter) {
+    for (var i = 0; i < currentWord.length; i++) {
+        if(currentWord[i] === letter) {
             positions.push(i);
         }
     }
