@@ -57,7 +57,6 @@ function resetGame() {
 
 };
 resetGame();
-console.log("Computer Pick: " + currentWord);
 
 
 function updateDisplay() {
@@ -140,6 +139,7 @@ document.onkeydown = function(event) {
     }
 };
 
+console.log("Computer Pick: " + currentWord);
 
 
 
